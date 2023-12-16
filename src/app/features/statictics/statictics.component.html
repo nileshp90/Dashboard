@@ -1,0 +1,65 @@
+<div class="card third">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="card-title">Money Statictics</span>
+      </div>
+      <div class="col-md-8 d-flex justify-content-end">
+        <span class="order-2 ml-2">...</span>
+        <span class="history-btns order-1">Monthly<i class="fa-solid fa-angle-down month-down"></i></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="card graph-card">
+          <div class="card-title sub">
+            <span class="mini-title">Total Income</span>
+            <div class="body">
+              <span>{{apiRes?.money_statistics?.total_income?.value | currency:'USD'}}</span>
+              <p class="micro-title">
+                <span [style.color]="apiRes?.money_statistics?.total_income?.trend_color"><i
+                    class="fa fa-thin  fa fa-arrow-trend-up"></i> +
+                  {{apiRes?.money_statistics?.total_income?.trend}}%</span>
+                from last month
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="card graph-card">
+          <div class="card-title sub">
+            <span class="mini-title">Total Expense</span>
+            <div class="body">
+              <span>{{apiRes?.money_statistics?.total_expense?.value | currency:'USD'}}</span>
+              <p class="micro-title">
+                <span [style.color]="apiRes?.money_statistics?.total_expense?.trend_color"><i
+                    class="fa fa-thin  fa fa-arrow-trend-up"></i> +
+                  {{apiRes?.money_statistics?.total_expense?.trend}}%</span>
+                from last month
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card graph-card">
+          <div class="card-title sub">
+            <span class="mini-title">Total Investment</span>
+            <div class="body">
+              <span>{{apiRes?.money_statistics?.total_investment?.value | currency:'USD'}}</span>
+              <p class="micro-title">
+                <span [style.color]="apiRes?.money_statistics?.total_investment?.trend_color"><i
+                    class="fa fa-thin  fa fa-arrow-trend-up"></i> +
+                  {{apiRes?.money_statistics?.total_investment?.trend}}%</span>
+                from last month
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body custom-margin">
+        <figure class="highcharts-figure ">
+          <div id="container"></div>
+        </figure>
+      </div>
+    </div>
+
+  </div>

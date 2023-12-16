@@ -1,0 +1,10 @@
+<div class="card second">
+    <span class="card-title">Total Balance</span>
+    <div class="total-amount">{{apiRes?.balance?.total_balance | currency:'USD'}}</div>
+    <div class="body">
+        <progress id="file" [value]="apiRes?.balance?.payment_done_percentage" max="100"></progress>
+        <p class="rate-txt">Monthly Payment Limit<span
+                class="rate">{{apiRes?.balance?.payment_done_so_far}}/{{apiRes?.balance?.monthly_payment_limit}}</span>
+        </p>
+    </div>
+</div>

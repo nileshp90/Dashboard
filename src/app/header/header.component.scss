@@ -1,0 +1,158 @@
+
+@import '~font-awesome/css/font-awesome.min.css';
+.header{
+  background: #383838;
+    color: white;
+    font-size: 12px;
+    height: 2.5rem;
+    text-align: center;
+    padding: 8px;
+
+    .header-txt{
+      margin-top: -2px;
+    }
+}
+
+.btn{
+  border: 2px solid white;
+    background: white;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-size: 10px;
+    width: 75px;
+    height: 25px;
+    padding-top: 3px;
+    font-weight: 700;
+}
+
+#sub-content {
+  position: relative;
+  // width: calc(100% - 200px);
+  // left: 219px;
+  transition: .3s ease;
+  background: var(--grey);
+  margin-left: -15px;
+}
+
+#sub-content nav {
+  margin-right: 35px;
+  border-radius: 10px;
+  height: 56px;
+  background: #fff;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  font-family: var(--lato);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#sub-content nav a {
+  color: var(--dark);
+}
+#sub-content nav .bx.bx-menu {
+  cursor: pointer;
+  color: var(--dark);
+}
+#sub-content nav .nav-link {
+  font-size: 16px;
+  transition: .3s ease;
+}
+#sub-content nav .nav-link:hover {
+  color: var(--blue);
+}
+#sub-content nav form {
+  max-width: 400px;
+  width: 100%;
+  margin-right: auto;
+}
+#sub-content nav form .form-input {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+#sub-content nav form .form-input input {
+  flex-grow: 1;
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  background: var(--grey);
+  border-radius: 36px 36px 36px 36px;
+  outline: none;
+  width: 100%;
+  color: var(--dark);
+}
+#sub-content nav form .form-input button {
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-sub-content: center;
+  align-items: center;
+  background: var(--blue);
+  color: var(--light);
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
+}
+#sub-content nav .notification {
+  font-size: 20px;
+  position: relative;
+}
+#sub-content nav .notification .num {
+  position: absolute;
+  top: 2px;
+  padding-left: 3px;
+  right: 2px;
+  width: 14px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+  background: #000;
+  color: var(--light);
+  font-weight: 700;
+  font-size: 6px;
+  display: flex;
+  justify-sub-content: center;
+  align-items: center;
+}
+#sub-content nav .profile img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.text{
+  font-size: 18px;
+  padding: 8px;
+}
+
+ .brand {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  // position: sticky;
+  top: 0;
+  left: 0;
+  // background: var(--light);
+  z-index: 500;
+  padding-bottom: 20px;
+  box-sizing: content-box;
+}
+ .brand .bx {
+  font-size: 16px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
