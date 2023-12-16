@@ -1,5 +1,5 @@
 progress::-webkit-progress-value {
-  background-color: black;
+  background-color: #00134d;
   border-radius: 20px;
 
 }
@@ -7,4 +7,58 @@ progress::-webkit-progress-value {
 :host ::ng-deep progress {
   background-color: white;
 
+}
+
+.custom-flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.atm-card {
+  margin-left: 20px;
+  width: 320px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 22px;
+}
+
+.add-atm {
+  border: 2px dotted #80808026;
+  display:flex;
+  font-size: smaller;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+
+  .bx {
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+
+.action-btns {
+  margin: 1rem;
+  border-radius: 10px;
+  border: 2px dotted #80808026;
+  padding-top: 19px;
+  padding-bottom: 23px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px 0px 0px 0px;
+  padding: 10px 0px 0px 10px;
+}
+
+.subtitle-hr {
+  margin: 25px 20px 10px 15px;
+  color: #80808078;
+}
+
+.precentage {
+  text-align: right;
+  /* Align the last span to the right */
+}
+
+.actn-text {
+  font-size: 9px;
 }

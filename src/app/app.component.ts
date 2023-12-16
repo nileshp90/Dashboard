@@ -96,37 +96,37 @@ export class AppComponent {
           ]
         },
         {
-          name: 'Investment', color: '#00000085',
+          name: 'Investment', color: '#00134d8a',
           data: [
-            { name: 'Jan', y: 51086, color: '#00000085' },
-            { name: 'Feb', y: 136000, color: '#00000085' },
-            { name: 'Mar', y: 320000, color: '#00000085' },
-            { name: 'Apr', y: 141000, color: '#00000085' },
-            { name: 'Mei', y: 107180, color: '#00000085' },
-            { name: 'Jun', y: 77000, color: '#00000085' },
-            { name: 'Jul', y: 406292, color: '#00000085' },
-            { name: 'Aug', y: 360000, color: '#00000085' },
-            { name: 'Sep', y: 107000, color: '#00000085' },
-            { name: 'Oct', y: 68300, color: '#00000085' },
-            { name: 'Nov', y: 27500, color: '#00000085' },
-            { name: 'Dec', y: 14500, color: '#00000085' }
+            { name: 'Jan', y: 51086, color: '#00134d8a' },
+            { name: 'Feb', y: 136000, color: '#00134d8a' },
+            { name: 'Mar', y: 320000, color: '#00134d8a' },
+            { name: 'Apr', y: 141000, color: '#00134d8a' },
+            { name: 'Mei', y: 107180, color: '#00134d8a' },
+            { name: 'Jun', y: 77000, color: '#00134d8a' },
+            { name: 'Jul', y: 406292, color: '#00134d8a' },
+            { name: 'Aug', y: 360000, color: '#00134d8a' },
+            { name: 'Sep', y: 107000, color: '#00134d8a' },
+            { name: 'Oct', y: 68300, color: '#00134d8a' },
+            { name: 'Nov', y: 27500, color: '#00134d8a' },
+            { name: 'Dec', y: 14500, color: '#00134d8a' }
           ]
         },
         {
-          name: 'Expense', color: '#000000bd',
+          name: 'Expense', color: '#00134d',
           data: [
-            { name: 'Jan', y: 51086, color: '#000000bd' },
-            { name: 'Feb', y: 136000, color: '#000000bd' },
-            { name: 'Mar', y: 55000, color: '#000000bd' },
-            { name: 'Apr', y: 141000, color: '#000000bd' },
-            { name: 'Mei', y: 107180, color: '#000000bd' },
-            { name: 'Jun', y: 77000, color: '#000000bd' },
-            { name: 'Jul', y: 206292, color: '#000000bd' },
-            { name: 'Aug', y: 160000, color: '#000000bd' },
-            { name: 'Sep', y: 307000, color: '#000000bd' },
-            { name: 'Oct', y: 28300, color: '#000000bd' },
-            { name: 'Nov', y: 27500, color: '#000000bd' },
-            { name: 'Dec', y: 14500, color: '#000000bd' }
+            { name: 'Jan', y: 51086, color: '#00134d' },
+            { name: 'Feb', y: 136000, color: '#00134d' },
+            { name: 'Mar', y: 55000, color: '#00134d' },
+            { name: 'Apr', y: 141000, color: '#00134d' },
+            { name: 'Mei', y: 107180, color: '#00134d' },
+            { name: 'Jun', y: 77000, color: '#00134d' },
+            { name: 'Jul', y: 206292, color: '#00134d' },
+            { name: 'Aug', y: 160000, color: '#00134d' },
+            { name: 'Sep', y: 307000, color: '#00134d' },
+            { name: 'Oct', y: 28300, color: '#00134d' },
+            { name: 'Nov', y: 27500, color: '#00134d' },
+            { name: 'Dec', y: 14500, color: '#00134d' }
           ]
         }
       ]

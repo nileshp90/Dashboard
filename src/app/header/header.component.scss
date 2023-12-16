@@ -1,30 +1,30 @@
-
 @import '~font-awesome/css/font-awesome.min.css';
-.header{
-  background: #383838;
-    color: white;
-    font-size: 12px;
-    height: 2.5rem;
-    text-align: center;
-    padding: 8px;
 
-    .header-txt{
-      margin-top: -2px;
-    }
+.header {
+  background-color: #00134d;
+  color: #f8f9fa;
+  font-size: 12px;
+  height: 2.5rem;
+  text-align: center;
+  padding: 8px;
+
+  .header-txt {
+    margin-top: -2px;
+  }
 }
 
-.btn{
-  border: 2px solid white;
-    background: white;
-    padding: 5px;
-    color: black;
-    border-radius: 5px;
-    margin-left: 1rem;
-    font-size: 10px;
-    width: 75px;
-    height: 25px;
-    padding-top: 3px;
-    font-weight: 700;
+.btn {
+  border: 2px solid #f8f9fa;
+  background: #f8f9fa;
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+  margin-left: 1rem;
+  font-size: 10px;
+  width: 75px;
+  height: 25px;
+  padding-top: 3px;
+  font-weight: 700;
 }
 
 #sub-content {
@@ -33,7 +33,7 @@
   // left: 219px;
   transition: .3s ease;
   background: var(--grey);
-  margin-left: -15px;
+  // margin-left: -15px;
 }
 
 #sub-content nav {
@@ -55,28 +55,35 @@
 #sub-content nav a {
   color: var(--dark);
 }
+
 #sub-content nav .bx.bx-menu {
   cursor: pointer;
   color: var(--dark);
 }
+
 #sub-content nav .nav-link {
   font-size: 16px;
   transition: .3s ease;
 }
+
 #sub-content nav .nav-link:hover {
   color: var(--blue);
 }
+
 #sub-content nav form {
   max-width: 400px;
   width: 100%;
   margin-right: auto;
 }
+
 #sub-content nav form .form-input {
   display: flex;
   align-items: center;
   height: 36px;
 }
+
 #sub-content nav form .form-input input {
+  font-size: 10px;
   flex-grow: 1;
   padding: 0 16px;
   height: 100%;
@@ -87,6 +94,7 @@
   width: 100%;
   color: var(--dark);
 }
+
 #sub-content nav form .form-input button {
   width: 36px;
   height: 100%;
@@ -101,10 +109,12 @@
   border-radius: 0 36px 36px 0;
   cursor: pointer;
 }
+
 #sub-content nav .notification {
   font-size: 20px;
   position: relative;
 }
+
 #sub-content nav .notification .num {
   position: absolute;
   top: 2px;
@@ -122,6 +132,7 @@
   justify-sub-content: center;
   align-items: center;
 }
+
 #sub-content nav .profile img {
   width: 36px;
   height: 36px;
@@ -129,12 +140,12 @@
   border-radius: 50%;
 }
 
-.text{
+.text {
   font-size: 18px;
   padding: 8px;
 }
 
- .brand {
+.brand {
   text-decoration: none;
   font-size: 24px;
   font-weight: 700;
@@ -150,9 +161,30 @@
   padding-bottom: 20px;
   box-sizing: content-box;
 }
- .brand .bx {
+
+.brand .bx {
   font-size: 16px;
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+
+.header-icon {
+  font-size: 13px;
+  padding: 8px;
+  border: 1px solid #80808030;
+  border-radius: 4px;
+}
+
+.search-bar {
+  margin-left: 7rem
+}
+
+.header-text {
+  font-size: 15px;
+}
+
+.company-profile {
+  font-weight: bold;
+  margin: 20px 0 32px -10px;
 }
