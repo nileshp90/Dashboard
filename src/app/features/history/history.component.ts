@@ -22,9 +22,9 @@ export class HistoryComponent implements OnInit {
   }
 
   getData() {
-    this.featuresServiceService.fetchData().subscribe(
-      (data) => {
-        this.tableData = data?.transactions;
+    this.featuresServiceService.getTransactions().subscribe(
+      (data: Transaction[]) => {
+        this.tableData = data;
       },
       (error) => {
         console.error('Error fetching data:', error);

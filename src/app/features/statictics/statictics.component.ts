@@ -18,9 +18,9 @@ export class StaticticsComponent implements OnInit {
   }
 
   getData() {
-    this.featuresServiceService.fetchData().subscribe(
-      (data) => {
-        this.moneyStatistics = data?.money_statistics;
+    this.featuresServiceService.getMoneyStatistics().subscribe(
+      (data: MoneyStatistics) => {
+        this.moneyStatistics = data
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -37,16 +37,10 @@ export class StaticticsComponent implements OnInit {
       chart: {
         type: 'column'
       },
-      // title: {
-      //     text: 'Income vs Investment estimated production for 2020',
-      //     align: 'left'
-      // },
-      // subtitle: {
-      //     text:
-      //         'Source: <a target="_blank" ' +
-      //         'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
-      //     align: 'left'
-      // },
+      title: {
+        text: '',
+        align: 'left'
+      },
       xAxis: {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
         crosshair: true,
@@ -54,14 +48,14 @@ export class StaticticsComponent implements OnInit {
           description: 'Countries'
         }
       },
-      // yAxis: {
-      //     min: 0,
-      //     title: {
-      //         text: '1000 metric tons (MT)'
-      //     }
-      // },
+      yAxis: {
+        min: 0,
+        title: {
+          text: ''
+        }
+      },
       tooltip: {
-        valueSuffix: ' (1000 MT)'
+        valueSuffix: ''
       },
       plotOptions: {
         column: {

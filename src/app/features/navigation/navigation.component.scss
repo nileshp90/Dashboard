@@ -47,15 +47,12 @@
 
 #sidebar .side-menu {
     width: 100%;
-    margin-top: 48px;
+    margin-top: -35px;
 }
 
 #sidebar .side-menu li {
     height: 35px;
-    // background: transparent;
     margin-left: 6px;
-    // border-radius: 48px 0 0 48px;
-    // padding: 4px;
 }
 
 #sidebar .side-menu li.active {
@@ -96,14 +93,13 @@
     align-items: center;
     // border-radius: 48px;
     font-size: 16px;
-    color: var(--dark);
+    color: #808080d9;
     white-space: nowrap;
     overflow-x: hidden;
 }
-
-#sidebar .side-menu.top li.active a {
-    // color: var(--blue);
-
+#sidebar .side-menu li a:hover {
+    color: var(--black);
+    font-weight: bold;
 }
 
 #sidebar.hide .side-menu li a {
@@ -142,7 +138,7 @@
     font-size: 14px;
     // margin-top: -25px;
     margin-left: 10px;
-    color: black;
+    color: #00134d;
 }
 
 .profile-line {
@@ -152,13 +148,36 @@
 .menu-heading {
     margin-left: 18px;
     font-size: 13px;
-    color: #aaaaaae6;
+    font-weight: bold;
+    color: #808080;
 }
 
 .menu-line {
-    margin: 20px 50px 21px 10px;
+    margin: 20px 50px 10px 10px;
 }
 
 .hexa {
     height: 35px;
 }
+
+.menu-line-initial {
+    margin: -32px 44px 53px 10px
+}
+
+.Payment-icon{
+    font-size: 25px;
+    margin: 10px;
+}
+
+.payment-container {
+    padding: 30px 32px 21px 36px;
+    margin: 30px 58px -34px 30px;
+    border-radius: 15px;
+    border: 3px dotted grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 9px;
+    background: whitesmoke;
+  }

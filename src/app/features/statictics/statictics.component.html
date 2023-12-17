@@ -14,7 +14,7 @@
         <div class="card-title sub">
           <span class="mini-title">Total Income</span>
           <div class="body">
-            <span>{{moneyStatistics?.total_income?.value | currency:'USD'}}</span>
+            <span class="amount">{{moneyStatistics?.total_income?.value | currency:'USD'}}</span>
             <p class="micro-title">
               <span [style.color]="moneyStatistics?.total_income?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +
@@ -29,7 +29,7 @@
         <div class="card-title sub">
           <span class="mini-title">Total Expense</span>
           <div class="body">
-            <span>{{moneyStatistics?.total_expense?.value | currency:'USD'}}</span>
+            <span class="amount">{{moneyStatistics?.total_expense?.value | currency:'USD'}}</span>
             <p class="micro-title">
               <span [style.color]="moneyStatistics?.total_expense?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +
@@ -43,7 +43,7 @@
         <div class="card-title sub">
           <span class="mini-title">Total Investment</span>
           <div class="body">
-            <span>{{moneyStatistics?.total_investment?.value | currency:'USD'}}</span>
+            <span class="amount">{{moneyStatistics?.total_investment?.value | currency:'USD'}}</span>
             <p class="micro-title">
               <span [style.color]="moneyStatistics?.total_investment?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +

@@ -721,12 +721,6 @@ body::-webkit-scrollbar {
 }
 
 
-.menu-heading {
-  margin-left: 18px;
-  font-size: 13px;
-  color: #aaaaaae6;
-}
-
 li .text {
   font-size: 14px;
 }
@@ -862,14 +856,14 @@ li .text {
   .second {
     margin-left: -3%;
     width: 96%;
-    height: fit-content;
+    height: 15%;
     padding: 14px;
     color: #00134d;
   }
 
   .third {
     margin-top: 4px;
-    height: fit-content;
+    height: 37%;
     padding: 1rem;
     margin-left: -3%;
     width: 96%;
@@ -954,7 +948,7 @@ progress::-webkit-progress-value {
 
 /* In your component's stylesheet */
 .custom-margin {
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 
 .highcharts-figure,

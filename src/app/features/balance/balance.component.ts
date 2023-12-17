@@ -17,9 +17,9 @@ export class BalanceComponent implements OnInit {
   }
 
   getData() {
-    this.featuresServiceService.fetchData().subscribe(
-      (data) => {
-        this.balance = data?.balance;
+    this.featuresServiceService.getBalance().subscribe(
+      (data: Balance) => {
+        this.balance = data;
       },
       (error) => {
         console.error('Error fetching data:', error);

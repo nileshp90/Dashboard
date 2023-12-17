@@ -1,5 +1,5 @@
 <section id="sidebar" [ngClass]="status ? 'hide' : ''">
-  <a href="#" class="brand">
+  <div class="brand">
     <img class="profile-img"
       src="https://secure.gravatar.com/avatar/d09eaad01aea86c51b4f892b4f8abf6f?s=100&d=wavatar&r=g">
     <h2 class="profie-name">Nilesh Pund</h2>
@@ -7,78 +7,24 @@
     <p class="angle-down">
       <i class="fa-solid fa-angle-down"></i>
     </p>
-  </a>
-  <a href="#" class="profile"></a>
-  <hr class="profile-line">
+  </div>
+  <p><hr class="menu-line-initial">
   <ul class="side-menu top">
-    <span class="menu-heading">Menu</span>
-    <li class="active">
-      <a href="#">
-        <i class='bx bxs-dashboard'></i>
-        <span class="text">Dashboard</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-shopping-bag-alt'></i>
-        <span class="text">My Store</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-doughnut-chart'></i>
-        <span class="text">Analytics</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-message-dots'></i>
-        <span class="text">Message</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-group'></i>
-        <span class="text">Team</span>
-      </a>
-    </li>
-    <hr class="menu-line">
-    <span class="menu-heading">General</span>
-    <li class="active">
-      <a href="#">
-        <i class='bx bxs-dashboard'></i>
-        <span class="text">Dashboard</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-shopping-bag-alt'></i>
-        <span class="text">My Store</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-doughnut-chart'></i>
-        <span class="text">Analytics</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-message-dots'></i>
-        <span class="text">Message</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bxs-group'></i>
-        <span class="text">Team</span>
-      </a>
-    </li>
-    <!-- <li>
-        <a class="payment-mode" href="#">
-          <i class='bx bxs-group' ></i>
-          <span class="text">Team</span>
+    <li *ngFor="let menuItem of menuItems">
+      <ng-container *ngIf="menuItem.heading; else menuLink">
+        <hr class="menu-line" *ngIf="menuItem.line" />
+        <span class="menu-heading">{{ menuItem.text }}</span>
+      </ng-container>
+      <ng-template #menuLink>
+        <a href="#">
+          <i *ngIf="menuItem.icon" class="{{ menuItem.icon }}"></i>
+          <span class="text">{{ menuItem.text }}</span>
         </a>
-      </li> -->
+      </ng-template>
+    </li>
   </ul>
+  <div class="payment-container">
+    <i class="fa-sharp fa-solid fa-circle-plus Payment-icon"></i>
+    <p>New Payment</p>
+  </div>
 </section>

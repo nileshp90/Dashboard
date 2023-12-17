@@ -3,7 +3,7 @@
 }
 
 .highcharts-figure #container {
-  height: 120%;
+  height: 87%;
 }
 
 
@@ -62,4 +62,12 @@
   height: 6rem;
   border: 0px;
   justify-content: space-between;
+}
+
+.row .container{
+  margin-top: -2%;
+}
+
+.amount{
+  font-size:20px
 }

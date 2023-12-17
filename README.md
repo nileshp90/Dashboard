@@ -1,5 +1,6 @@
 
-![image](https://github.com/nileshp90/Dashboard/assets/99634599/fcbe1538-eab5-47fe-9b68-92fcc94205f5)
+![image](https://github.com/nileshp90/Dashboard/assets/99634599/d4de6bde-f13f-482b-8026-8f55e9406151)
+
 
 # IfElseDashboard
 
