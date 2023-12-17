@@ -1,91 +1,80 @@
 <div class="card fourth">
-    <div class="row c-header">
-      <div class="col-md-4">
-        <span class="card-title">Transaction History</span>
-
-      </div>
-      <div class="col-md-8">
-        <div class="transction-card d-flex justify-content-end align-items-center">
-          <input type="text" class="search-input mr-2" [(ngModel)]="searchText" placeholder="Search...">
-          <span class="history-btns ml-2"><i class='bx bx-filter'></i>Filter</span>
-          <span class="history-btns ml-2"><i class='bx bx-export'></i>Export</span>
-        </div>
-      </div>
-
+  <div class="row c-header">
+    <div class="col-md-4">
+      <span class="card-title">Transaction History</span>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="table-container">
-          <table cellspacing="0" cellpadding="0">
-            <thead>
-              <tr>
-                <th *ngFor="let header of tableHeaders">{{ header }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                *ngFor="let transaction of getFilteredTableData() || [] | slice:(currentPage-1)*itemsPerPage : currentPage*itemsPerPage">
-                <td class="bold">{{ transaction.date | date}}</td>
-                <td class="bold">{{ transaction.name }}</td>
-                <td>
-                  <span [ngClass]="
+    <div class="col-md-8">
+      <div class="transction-card d-flex justify-content-end align-items-center">
+        <input type="text" class="search-input mr-2" [(ngModel)]="searchText" placeholder="Search...">
+        <span class="history-btns ml-2"><i class='bx bx-filter'></i>Filter</span>
+        <span class="history-btns ml-2"><i class='bx bx-export'></i>Export</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="table-container">
+        <table cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th *ngFor="let header of tableHeaders">{{ header }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let transaction of getFilteredTableData() || [] | slice:(currentPage-1)*itemsPerPage : currentPage*itemsPerPage">
+              <td class="bold">{{ transaction.date | date}}</td>
+              <td class="bold">{{ transaction.name }}</td>
+              <td>
+                <span [ngClass]="
                 {
                   'success': transaction.status === 'Success',
                   'fail': transaction.status === 'Failed',
                   'pending': transaction.status === 'Pending'
                 }">{{ transaction.status }}</span>
-                </td>
-                <td>{{ transaction.type }}</td>
-                <td>{{ transaction.date | date: 'h:mm a' }}</td>
-                <td class="bold">{{ transaction.amount | currency:'USD' }}</td>
-                <td class="bold" data-toggle="modal" data-target="#exampleModalCenter"
-                  (click)="openModal(transaction)">...</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <nav>
-            <ul class="pagination">
-              <li class="page-item" [class.disabled]="currentPage === 1">
-                <a class="page-link" (click)="currentPage = currentPage - 1">Previous</a>
-              </li>
-              <li class="page-item" *ngFor="let page of getPages()">
-                <a class="page-link" (click)="currentPage = page">{{ page }}</a>
-              </li>
-              <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
-                <a class="page-link" (click)="currentPage = currentPage + 1">Next</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+              </td>
+              <td>{{ transaction.type }}</td>
+              <td>{{ transaction.date | date: 'h:mm a' }}</td>
+              <td class="bold">{{ transaction.amount | currency:'USD' }}</td>
+              <td class="bold" data-toggle="modal" data-target="#exampleModalCenter" (click)="openModal(transaction)">
+                ...</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav>
+          <ul class="pagination">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+              <a class="page-link" (click)="currentPage = currentPage - 1">Previous</a>
+            </li>
+            <li class="page-item" *ngFor="let page of getPages()">
+              <a class="page-link" (click)="currentPage = page">{{ page }}</a>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
+              <a class="page-link" (click)="currentPage = currentPage + 1">Next</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" >
-Launch demo modal
-</button> -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-
-          <div class="modal-body">
-            <div class="names">
-              <p><span class="modal-name"> Name : </span> <span class="modal-sub-name">{{
-                  selectedTransaction?.name }}</span> </p>
-              <p><span class="modal-name"> Type : </span> <span class="modal-sub-name">{{
-                  selectedTransaction?.type }}</span> </p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <div class="names">
+            <p><span class="modal-name"> Name : </span> <span class="modal-sub-name">{{
+                selectedTransaction?.name }}</span> </p>
+            <p><span class="modal-name"> Type : </span> <span class="modal-sub-name">{{
+                selectedTransaction?.type }}</span> </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

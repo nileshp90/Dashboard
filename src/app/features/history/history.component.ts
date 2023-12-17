@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiResponse, Transaction } from 'src/app/Interfaces/feature-interfaces';
+import { FeaturesServiceService } from 'src/app/services/features-service.service';
 
 @Component({
   selector: 'app-history',
@@ -14,73 +16,46 @@ export class HistoryComponent implements OnInit {
   currentPage = 1;
   itemsPerPage = 5;
 
-  constructor() { }
+  constructor(private featuresServiceService: FeaturesServiceService) { }
 
   ngOnInit(): void {
-    this.fetchDataFromAPI();
+    this.getData();
   }
+
+  getData() {
+    this.featuresServiceService.fetchData().subscribe(
+      (data) => {
+        this.apiRes = data;
+        this.tableData = data?.transactions;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
+
   openModal(transaction: any): void {
     this.selectedTransaction = transaction;
   }
 
-  fetchDataFromAPI() {
-    // Simulate an API call
-    fetch('https://1.api.fy23ey06.careers.ifelsecloud.com/')
-      .then(response => response.json())
-      .then(data => {
-        // Assuming the API response contains progress information (percentage)
-        this.apiRes = data;
-        this.tableData = data?.transactions;
-        console.log(this.apiRes);
-
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }
-
   getFilteredTableData(): Transaction[] {
     const searchTextLowerCase = this.searchText.toLowerCase();
-    
+
     return (this.tableData || []).filter(transaction =>
       Object.values(transaction).some(value =>
         value.toString().toLowerCase().includes(searchTextLowerCase)
       )
     );
   }
+
   getPages(): number[] {
     const totalPages = this.getTotalPages();
     return Array.from({ length: totalPages }, (_, index) => index + 1);
   }
- 
+
   getTotalPages(): number {
     const totalItems = this.apiRes?.transactions.length || 0;
     return Math.ceil(totalItems / this.itemsPerPage);
   }
-}
 
-interface ApiResponse {
-  transactions: Transaction[];
-  money_statistics: MoneyStatistics;
-  balance:Balance;
-  // Other properties...
-}
-
-interface MoneyStatistics {
-  total_income: any;
-  total_expense: any;
-  total_investment: any;
-}
-interface Transaction {
-  date: Date;
-  name: string;
-  status: string;
-  type: string;
-  amount: any;
-}
-interface Balance {
-  total_balance: any;
-  payment_done_percentage: any;
-  payment_done_so_far: any;
-  monthly_payment_limit: any;
 }

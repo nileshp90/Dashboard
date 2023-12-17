@@ -1,23 +1,22 @@
 progress::-webkit-progress-value {
-    background-color: black;
-    border-radius: 20px;
-  
-  }
-  
-  :host ::ng-deep progress {
-    background-color: white;
-  
-  }
+  background-color: black;
+  border-radius: 20px;
+}
 
-  .rate-txt {
-    // margin-left: 1rem;
-    font-size: 10px;
-  }
-  
-  
-  .total-amount {
-    // margin-left: 1rem;
-    font-weight: 600;
-    /* color: #808080db; */
-    font-size: 2rem;
-  }
+:host ::ng-deep progress {
+  background-color: white;
+
+}
+
+.rate-txt {
+  // margin-left: 1rem;
+  font-size: 10px;
+}
+
+
+.total-amount {
+  // margin-left: 1rem;
+  font-weight: 600;
+  /* color: #808080db; */
+  font-size: 2rem;
+}

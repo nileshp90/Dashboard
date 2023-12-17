@@ -11,6 +11,7 @@ import { BalanceComponent } from './features/balance/balance.component';
 import { StaticticsComponent } from './features/statictics/statictics.component';
 import { HistoryComponent } from './features/history/history.component';
 import { NavigationComponent } from './features/navigation/navigation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavigationComponent } from './features/navigation/navigation.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

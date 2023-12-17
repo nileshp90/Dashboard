@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiResponse } from 'src/app/Interfaces/feature-interfaces';
+import { FeaturesServiceService } from 'src/app/services/features-service.service';
 
 @Component({
   selector: 'app-balance',
@@ -7,54 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceComponent implements OnInit {
   apiRes: ApiResponse | undefined;
-  tableData: Transaction[] | undefined;
 
-  constructor() { }
+  constructor(private featuresServiceService: FeaturesServiceService) { }
 
   ngOnInit(): void {
-    this.fetchDataFromAPI();
+    this.getData();
   }
 
-  fetchDataFromAPI() {
-    // Simulate an API call
-    fetch('https://1.api.fy23ey06.careers.ifelsecloud.com/')
-      .then(response => response.json())
-      .then(data => {
-        // Assuming the API response contains progress information (percentage)
+  getData() {
+    this.featuresServiceService.fetchData().subscribe(
+      (data) => {
         this.apiRes = data;
-        this.tableData = data?.transactions;
-        console.log(this.apiRes);
-
-      })
-      .catch(error => {
+      },
+      (error) => {
         console.error('Error fetching data:', error);
-      });
+      }
+    );
   }
 
-}
-
-interface ApiResponse {
-  transactions: Transaction[];
-  money_statistics: MoneyStatistics;
-  balance:Balance;
-  // Other properties...
-}
-
-interface MoneyStatistics {
-  total_income: any;
-  total_expense: any;
-  total_investment: any;
-}
-interface Transaction {
-  date: Date;
-  name: string;
-  status: string;
-  type: string;
-  amount: any;
-}
-interface Balance {
-  total_balance: any;
-  payment_done_percentage: any;
-  payment_done_so_far: any;
-  monthly_payment_limit: any;
 }

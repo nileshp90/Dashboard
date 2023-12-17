@@ -327,7 +327,7 @@ body::-webkit-scrollbar {
 
 /* MAIN */
 #content main {
-  margin-top: -1rem;
+  margin-top: -1.2rem;
   width: 100%;
   font-family: var(--poppins);
   max-height: calc(100vh - 100px);
@@ -861,7 +861,7 @@ li .text {
 .card-container {
   .second {
     margin-left: -3%;
-    width: 97%;
+    width: 96%;
     height: fit-content;
     padding: 14px;
     color: #00134d;
@@ -872,14 +872,14 @@ li .text {
     height: fit-content;
     padding: 1rem;
     margin-left: -3%;
-    width: 97%;
+    width: 96%;
   }
 
   .fourth {
     margin-top: 4px;
     padding: 1rem;
     margin-left: -3%;
-    width: 97%;
+    width: 96%;
     height: max-content;
   }
 }
