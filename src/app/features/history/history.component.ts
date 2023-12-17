@@ -11,7 +11,6 @@ export class HistoryComponent implements OnInit {
   tableHeaders: any[] = ['Date', 'Name', 'Status', 'Type', 'Time', 'Amount', 'Action'];
   searchText = '';
   selectedTransaction: any;
-  apiRes: ApiResponse | undefined;
   tableData: Transaction[] | undefined;
   currentPage = 1;
   itemsPerPage = 5;
@@ -25,7 +24,6 @@ export class HistoryComponent implements OnInit {
   getData() {
     this.featuresServiceService.fetchData().subscribe(
       (data) => {
-        this.apiRes = data;
         this.tableData = data?.transactions;
       },
       (error) => {
@@ -54,7 +52,7 @@ export class HistoryComponent implements OnInit {
   }
 
   getTotalPages(): number {
-    const totalItems = this.apiRes?.transactions.length || 0;
+    const totalItems = this.tableData?.length || 0;
     return Math.ceil(totalItems / this.itemsPerPage);
   }
 

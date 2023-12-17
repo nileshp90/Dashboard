@@ -14,11 +14,11 @@
         <div class="card-title sub">
           <span class="mini-title">Total Income</span>
           <div class="body">
-            <span>{{apiRes?.money_statistics?.total_income?.value | currency:'USD'}}</span>
+            <span>{{moneyStatistics?.total_income?.value | currency:'USD'}}</span>
             <p class="micro-title">
-              <span [style.color]="apiRes?.money_statistics?.total_income?.trend_color"><i
+              <span [style.color]="moneyStatistics?.total_income?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +
-                {{apiRes?.money_statistics?.total_income?.trend}}%</span>
+                {{moneyStatistics?.total_income?.trend}}%</span>
               from last month
             </p>
           </div>
@@ -29,11 +29,11 @@
         <div class="card-title sub">
           <span class="mini-title">Total Expense</span>
           <div class="body">
-            <span>{{apiRes?.money_statistics?.total_expense?.value | currency:'USD'}}</span>
+            <span>{{moneyStatistics?.total_expense?.value | currency:'USD'}}</span>
             <p class="micro-title">
-              <span [style.color]="apiRes?.money_statistics?.total_expense?.trend_color"><i
+              <span [style.color]="moneyStatistics?.total_expense?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +
-                {{apiRes?.money_statistics?.total_expense?.trend}}%</span>
+                {{moneyStatistics?.total_expense?.trend}}%</span>
               from last month
             </p>
           </div>
@@ -43,11 +43,11 @@
         <div class="card-title sub">
           <span class="mini-title">Total Investment</span>
           <div class="body">
-            <span>{{apiRes?.money_statistics?.total_investment?.value | currency:'USD'}}</span>
+            <span>{{moneyStatistics?.total_investment?.value | currency:'USD'}}</span>
             <p class="micro-title">
-              <span [style.color]="apiRes?.money_statistics?.total_investment?.trend_color"><i
+              <span [style.color]="moneyStatistics?.total_investment?.trend_color"><i
                   class="fa fa-thin  fa fa-arrow-trend-up"></i> +
-                {{apiRes?.money_statistics?.total_investment?.trend}}%</span>
+                {{moneyStatistics?.total_investment?.trend}}%</span>
               from last month
             </p>
           </div>

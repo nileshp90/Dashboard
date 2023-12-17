@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiResponse } from 'src/app/Interfaces/feature-interfaces';
+import { Balance } from 'src/app/Interfaces/feature-interfaces';
 import { FeaturesServiceService } from 'src/app/services/features-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { FeaturesServiceService } from 'src/app/services/features-service.servic
   styleUrls: ['./balance.component.scss']
 })
 export class BalanceComponent implements OnInit {
-  apiRes: ApiResponse | undefined;
+  balance: Balance | undefined;
 
   constructor(private featuresServiceService: FeaturesServiceService) { }
 
@@ -19,7 +19,7 @@ export class BalanceComponent implements OnInit {
   getData() {
     this.featuresServiceService.fetchData().subscribe(
       (data) => {
-        this.apiRes = data;
+        this.balance = data?.balance;
       },
       (error) => {
         console.error('Error fetching data:', error);

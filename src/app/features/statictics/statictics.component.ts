@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import { ApiResponse } from 'src/app/Interfaces/feature-interfaces';
+import { MoneyStatistics } from 'src/app/Interfaces/feature-interfaces';
 import { FeaturesServiceService } from 'src/app/services/features-service.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FeaturesServiceService } from 'src/app/services/features-service.servic
   styleUrls: ['./statictics.component.scss']
 })
 export class StaticticsComponent implements OnInit {
-  apiRes: ApiResponse | undefined;
+  moneyStatistics: MoneyStatistics | undefined;
 
   constructor(private featuresServiceService: FeaturesServiceService) { }
 
@@ -20,7 +20,7 @@ export class StaticticsComponent implements OnInit {
   getData() {
     this.featuresServiceService.fetchData().subscribe(
       (data) => {
-        this.apiRes = data;
+        this.moneyStatistics = data?.money_statistics;
       },
       (error) => {
         console.error('Error fetching data:', error);
